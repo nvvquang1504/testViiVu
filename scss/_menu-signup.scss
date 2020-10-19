@@ -1,0 +1,43 @@
+@import "myVariables";
+@import "myMixins";
+@import "base";
+
+#menu-signup {
+    @include calcHeightWrapper(1.2);
+    background-color: white;
+    & .menu-signup {
+        &__content {
+            @include createLogo();
+            & .langs-butts {
+                & .languages {
+                    margin: 0 5px;
+                    &__title {
+                        cursor: pointer;
+                        &.active {
+                            color: $color-base-blue;
+                            font-weight: 900;
+                        }
+                    }
+                }
+                & .buttons {
+                    &__item {
+                        cursor: pointer;
+                        padding: 12px 20px;
+                        border: 1px solid transparent;
+                        color: white;
+                        font-size: 0.65rem;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        &--green {
+                            background-color: $color-base-green;
+                            margin: 0 5px;
+                        }
+                        &--light-green {
+                            background-color: $color-base-light-green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

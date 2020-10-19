@@ -1,0 +1,101 @@
+@import "myVariables";
+@import "myMixins";
+@import "base";
+
+#banner {
+    height: 45vh;
+    max-width: 100vw;
+    overflow: hidden;
+    & .banner {
+        &__content {
+            height: 100%;
+            position: relative;
+            & .mySliders {
+                height: 100%;
+                &.fade {
+                    animation-name: fade;
+                    animation-duration: 1.5s;
+                }
+                @keyframes fade {
+                    from {
+                        opacity: 0.4;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }
+                &__text-wrapper {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    & .eachSliderText {
+                        width: 50%;
+                        font-size: 1.5rem;
+                        text-transform: uppercase;
+                        font-weight: 900;
+                        letter-spacing: 1.5px;
+                    }
+                }
+            }
+            & .triangle--small {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: calc(2 * #{$nav-height}) 0 0 20vw;
+                border-color: transparent transparent transparent $color-base-blue;
+            }
+            & .dot {
+                &__wrapper {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    & div {
+                        width: 95%;
+                        margin: 0 auto;
+                        text-align: left;
+                        padding: 30px 0;
+                    }
+                }
+                &__item {
+                    cursor: pointer;
+                    height: 10px;
+                    width: 10px;
+                    margin: 0 2px;
+                    background-color: white;
+                    border-radius: 50%;
+                    display: inline-block;
+                    transition: visibility 0.6s ease;
+                    border: solid 1px white;
+                    &.active {
+                        background-color: $color-base-green;
+                    }
+                }
+            }
+            & .prev-slide, .next-slide {
+                position: absolute;
+                top: 50%;
+                background-color: transparent;
+                color: white;
+                transform: translateY(-50%);
+                font-size: 2rem;
+                padding: 8px;
+                border-radius: 3px;
+                transition: 0.4s ease;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+                &--left {
+                    margin-left: 10%;
+                }
+                &--right {
+                    right: 0;
+                    margin-right: 10%;
+                }
+            }
+        }
+    }
+}

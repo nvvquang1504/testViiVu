@@ -1,0 +1,108 @@
+@import "myVariables";
+@import "myMixins";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-size: 0.9rem;
+}
+
+.container {
+    width: 65%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.h {
+    &-100 {
+        height: 100%;
+    }
+}
+
+.w {
+    &-100 {
+        width: 100%;
+    }
+
+    &-60 {
+        width: 60%;
+    }
+}
+
+.d-flex {
+    display: flex;
+}
+
+.jus {
+    &-cen {
+        justify-content: center;
+    }
+
+    &-start {
+        justify-content: flex-start;
+    }
+
+    &-end {
+        justify-content: flex-end;
+    }
+
+    &-between {
+        justify-content: space-between;
+    }
+
+    &-around {
+        justify-content: space-around;
+    }
+
+    &-stretch {
+        justify-content: stretch;
+    }
+}
+
+.ali {
+    &-cen {
+        align-items: center;
+    }
+
+    &-start {
+        align-items: flex-start;
+    }
+
+    &-end {
+        align-items: flex-end;
+    }
+
+    &-stretch {
+        align-items: stretch;
+    }
+}
+
+.flex {
+    &-1 {
+        flex-grow: 1;
+    }
+
+    &-2 {
+        flex-grow: 2;
+    }
+
+    &-3 {
+        flex-grow: 3;
+    }
+}
+@media screen and (min-width: $x-large-screen){
+    html {
+        font-size: 14px;
+    }
+}

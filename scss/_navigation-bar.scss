@@ -1,0 +1,30 @@
+@import "myVariables";
+@import "myMixins";
+@import "base";
+
+#navigation-bar {
+    height: $nav-height;
+    background-color: $color-base-blue;
+
+    & .navigation-bar {
+        &__item {
+            flex-grow: 1;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            vertical-align: middle;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bolder;
+            letter-spacing: 1px;
+
+            &.active {
+                background-color: $color-base-green;
+            }
+
+        }
+    }
+}
+

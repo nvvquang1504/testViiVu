@@ -1,0 +1,13 @@
+@import "myVariables";
+@import "myMixins";
+@import "base";
+
+#footer {
+    @include calcHeightWrapper(0.8);
+    background-color: $color-base-grey;
+    & .footer {
+        &__content {
+            font-size: 0.68rem;
+        }
+    }
+}

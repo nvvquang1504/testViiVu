@@ -1,0 +1,32 @@
+@import "myVariables";
+@import "myMixins";
+@import "base";
+
+#infomations {
+    @include calcHeightWrapper(1);
+    background-color: $color-base-strong-grey;
+    & .infomations {
+        &__content {
+        }
+        &__item {
+            flex-grow: 1;
+            font-size: 0.8rem;
+            font-weight: 300;
+            & div:nth-child(1) {
+                & .icon {
+                    width: 26px;
+                    height: 26px;
+                    margin-right: 5px;
+                }
+            }
+            & div:nth-child(2) {
+            }
+            &--2 {
+                justify-content: center;
+            }
+            &--3 {
+                justify-content: flex-end;
+            }
+        }
+    }
+}

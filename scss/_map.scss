@@ -1,0 +1,8 @@
+@import "myVariables";
+@import "myMixins";
+@import "base";
+
+#map{
+    @include calcHeightWrapper(6);
+    padding-bottom: 6px;
+}
